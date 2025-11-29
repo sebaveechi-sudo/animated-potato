@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from config import settings
 from logic.simulation_state import SimulationState
