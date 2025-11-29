@@ -1,4 +1,4 @@
-INFO081-CP-ProyectoTrenes
+# INFO081-CP-ProyectoTrenes
 
 ## Resumen de la Propuesta
 Este proyecto implementa el "Sistema de Simulación de Tráfico Ferroviario" para la Empresa de Ferrocarriles del Estado (EFE). El sistema permite a un "Operario" gestionar trenes, estaciones y rutas en una simulación basada en turnos y eventos. El objetivo principal es proveer una herramienta para la toma de decisiones que optimice el flujo de pasajeros y mejore la eficiencia de la red ferroviaria.
