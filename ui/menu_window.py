@@ -6,7 +6,7 @@ class MenuWindow(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
-        self.configure(bg="white") # Usando color base por ahora
+        self.configure(bg="white") 
 
         label = tk.Label(self, text="Simulador de Tráfico Ferroviario EFE", font=("Arial", 24))
         label.pack(pady=50)
