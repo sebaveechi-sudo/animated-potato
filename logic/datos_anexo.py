@@ -1,4 +1,3 @@
-# logic/datos_anexo.py
 from models.entidades import Estacion, Tren
 
 def cargar_estaciones_base():
