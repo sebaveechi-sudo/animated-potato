@@ -1,4 +1,3 @@
-# logic/save_system.py
 import json
 import os
 
