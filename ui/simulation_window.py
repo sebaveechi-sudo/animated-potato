@@ -1,4 +1,3 @@
-# ui/simulation_window.py
 import tkinter as tk
 from config import settings
 
