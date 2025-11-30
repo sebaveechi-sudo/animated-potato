@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 from config import settings
 from logic import datos_anexo
 from models.entidades import Pasajero
+from tkinter import messagebox
 
 class SimulationState:
     def __init__(self):
@@ -83,13 +84,15 @@ class SimulationState:
         path = os.path.join(settings.DATA_DIR, "partida_guardada.json")
         
         if not os.path.exists(path):
-            print("AVISO: No existe archivo de guardado para cargar.")
-            return 
+            messagebox.showwarning("Aviso", "No existe ninguna partida guardada todavía.\n\nPrueba iniciar una 'Nueva Simulación' y dale a 'Guardar' primero.")
+            return
 
         try:
             with open(path, "r") as f:
                 data = json.load(f)
                 self.hora_actual = datetime.strptime(data["hora"], "%Y-%m-%d %H:%M:%S")
-            print("Partida cargada exitosamente.")
+            
+            messagebox.showinfo("Éxito", f"Partida cargada correctamente.\nHora restaurada: {self.hora_actual.strftime('%H:%M')}")
+            
         except Exception as e:
-            print(f"Error al leer el archivo: {e}")
+            messagebox.showerror("Error", f"El archivo de guardado está dañado.\nDetalle: {e}")
