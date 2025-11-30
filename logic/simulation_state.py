@@ -81,8 +81,15 @@ class SimulationState:
 
     def cargar_partida(self):
         path = os.path.join(settings.DATA_DIR, "partida_guardada.json")
-        if os.path.exists(path):
+        
+        if not os.path.exists(path):
+            print("AVISO: No existe archivo de guardado para cargar.")
+            return 
+
+        try:
             with open(path, "r") as f:
                 data = json.load(f)
                 self.hora_actual = datetime.strptime(data["hora"], "%Y-%m-%d %H:%M:%S")
-            print("Partida cargada.")
+            print("Partida cargada exitosamente.")
+        except Exception as e:
+            print(f"Error al leer el archivo: {e}")
