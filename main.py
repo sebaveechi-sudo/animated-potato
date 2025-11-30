@@ -3,7 +3,7 @@ from config import settings
 from logic.simulation_state import SimulationState
 from ui.menu_window import MenuWindow
 from ui.simulation_window import SimulationWindow
-asasasa
+
 class MainApp(tk.Tk):
     def __init__(self):
         super().__init__()
